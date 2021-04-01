@@ -3,3 +3,5 @@
 ################################################################################
 
 /.vs
+/WebApplication.BookStore/.vs/WebApplication.BookStore/v16
+/WebApplication.BookStore/WebApplication.BookStore/obj
