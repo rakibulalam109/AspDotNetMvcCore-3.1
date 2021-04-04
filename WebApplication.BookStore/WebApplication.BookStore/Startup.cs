@@ -28,12 +28,11 @@ namespace WebApplication.BookStore
             }
 
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
-              
-                    endpoints.MapDefaultControllerRoute();
-                
+                    endpoints.MapDefaultControllerRoute();              
             });
         }
     }

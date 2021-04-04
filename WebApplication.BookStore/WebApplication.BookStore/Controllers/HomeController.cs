@@ -8,9 +8,13 @@ namespace WebApplication.BookStore.Controllers
 {
     public class HomeController:Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "Book Store";
+            return View();
+        }
+        public ViewResult AboutUs()
+        {
+            return View();
         }
     }
 }
