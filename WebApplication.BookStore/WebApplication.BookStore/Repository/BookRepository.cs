@@ -24,9 +24,11 @@ namespace WebApplication.BookStore.Repository
         {
             return new List<BookModel>()
             {
-                new BookModel(){Id=1,Title="MVC",Author="Nitish"},
-                new BookModel(){Id=2,Title="C#",Author="Rakib"},
-                new BookModel(){Id=3,Title="JAVA",Author="Sakib"}
+                new BookModel(){Id=1,Title="MVC",Author="Nitish",Description="This is MVC book",Category="Pattern",TotalPage=1200,Language="Bengali"},
+                new BookModel(){Id=2,Title="C#",Author="Rakib",Description="This is C# book",Category="Programming",TotalPage=120,Language="English"},
+                new BookModel(){Id=3,Title="JAVA",Author="Sakib",Description="This is JAVA book",Category="Programming",TotalPage=385,Language="Arabic"},
+                new BookModel(){Id=4,Title="Python",Author="Raiyan",Description="This is Python book",Category="Programming",TotalPage=145,Language="Bengali"},
+                new BookModel(){Id=5,Title="C++",Author="Shishir",Description="This is C++ book",Category="Programming",TotalPage=333,Language="Bengali"}
             };
         }
     }

@@ -1,16 +1,75 @@
-﻿
-@{
-    Layout = null;
-}
+﻿@model BookModel
 
-<!DOCTYPE html>
+<div class="container">
+    <div class="row">
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>GetBookById</title>
-</head>
-<body>
-    <h2>Hi from get book by id</h2>
-</body>
-</html>
+        <div class="col-md-6">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/images/logo.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    @Model.Title
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-primary">
+                    <span class="label label-primary">By: </span>
+                    <span class="monospaced">@Model.Author</span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="description">
+                        @Model.Description
+                    </p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <a class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                        Read now
+                    </a>
+                </div>
+            </div>
+            <hr />
+            <ul class="list-group">
+                <li class="list-group-item"><span class="font-weight-bold">Category - </span>@Model.Category </li>
+                <li class="list-group-item"><span class="font-weight-bold">Total pages - </span> @Model.TotalPage</li>
+                <li class="list-group-item"><span class="font-weight-bold">Language - </span> @Model.Language</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Similar Books</h2>
+        <div class="row">
+            @for (int i = 0; i < 5; i++)
+            {
+                <div class="col-sm-4">
+                    <div class="card">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@Model.Title</h5>
+                            <p class="card-text">@Model.Description</p>
+                            <a href="/book/getbookbyid/@Model.Id" class="btn btn-primary">Detail</a>
+                            <a href="#" class="">@Model.Author</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

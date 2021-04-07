@@ -17,13 +17,13 @@ namespace WebApplication.BookStore.Controllers
         }
         public ViewResult GetAllBooks()
         {
-            _bookRepository.GetAllBooks();
-            return View();
+            var data=_bookRepository.GetAllBooks();
+            return View(data);
         }
         public ViewResult GetBookById(int id)
         {
-             _bookRepository.GetBookById(id);
-            return View();
+            var data =  _bookRepository.GetBookById(id);
+            return View(data);
         }
         public ViewResult SearchBook(string title,string author)
         {
