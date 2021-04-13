@@ -1,4 +1,7 @@
-﻿@model BookModel
+﻿@{
+    ViewData["DynamicTitle"] = Model.Title;
+}
+@*@model BookModel*@
 
 <div class="container">
     <div class="row">
@@ -7,7 +10,7 @@
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/images/logo.jpg" class="d-block w-100" alt="...">
+                        <img src="/images/logo.jpg" class="d-block w-100" alt="..." asp-append-version="true">
                     </div>
                 </div>
             </div>
@@ -58,11 +61,11 @@
             {
                 <div class="col-sm-4">
                     <div class="card">
-                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" class="card-img-top" alt="...">
+                        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" class="card-img-top" alt="..." asp-append-version="true">
                         <div class="card-body">
                             <h5 class="card-title">@Model.Title</h5>
                             <p class="card-text">@Model.Description</p>
-                            <a href="/book/getbookbyid/@Model.Id" class="btn btn-primary">Detail</a>
+                            <a asp-controller="book" asp-action="getbookbyid" asp-route-id="@Model.Id" class="btn btn-primary">Detail</a>
                             <a href="#" class="">@Model.Author</a>
                         </div>
                     </div>

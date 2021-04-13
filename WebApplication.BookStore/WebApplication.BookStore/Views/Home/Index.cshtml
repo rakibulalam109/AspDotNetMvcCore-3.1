@@ -1,4 +1,6 @@
-﻿
+﻿@{
+    ViewData["DynamicTitle"] = "Home";
+}
 <section>
     <div class="container text-center">
         <div class="jumbotron">
@@ -36,7 +38,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="card">
-                    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" class="card-img-top" alt="...">
+                    <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg" class="card-img-top" asp-append-version="true" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -53,7 +55,7 @@
 @section scriptFile{
     <script>
         $(document).ready(function () {
-            alert("Hi");
+            //alert("Hi");
         });
     </script>
 }
